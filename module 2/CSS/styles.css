@@ -1,0 +1,16 @@
+.header {
+    font-family: sans-serif;
+    
+    background-color: aliceblue;
+    margin: 30px auto;
+    text-align: center;
+}
+body {
+    background-image: url("/images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+section p {
+    color: rgb(135, 138, 137);
+}
