@@ -1,0 +1,18 @@
+header > h1 {
+    text-align: center;
+    background-color: aliceblue;
+}
+body {
+    font-family: sans-serif;
+
+}
+caption {
+    display: inline;
+}
+th,td {
+    border: 1px solid rgb(46, 4, 255);
+    padding: 5px 10px;
+}
+table {
+    border-collapse: collapse;
+}
