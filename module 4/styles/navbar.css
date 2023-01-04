@@ -13,23 +13,25 @@ nav > a {
 li {
     list-style: none;
 }
-a:hover > .dropdown {
-    display: block;
+a:hover .dropdown {
+    display: list-item;
 }
 .dropdown {
     display: none;
+    color: black;  
+    background-color: rgb(192, 185, 185);
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: blueviolet;
 }
 
 li > a {
-    text-decoration: none;
-    color: black;
     display: flex;
-    background-color: rgb(192, 185, 185);
 }
-a > li {
-   display: flex;
-   
-}
+
 nav {
     margin-bottom: 80px;
     display: flex;
