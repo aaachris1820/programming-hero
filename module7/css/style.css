@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.transform-text {
+    border: 1px solid red;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+.transform-text:hover {
+    transform:rotateZ(90deg);
+}
+.container-cricket {
+    border: 1px solid red;
+    padding-top: 30px;
+    font-size: 0;
+    height: 400px;
+    width: 1500px;
+}
+.bat {
+    display: inline-block;
+    border: 1px solid red;
+    width: 50px;
+    height: 200px;
+    font-size: 14px;
+    background-color: black;
+    color:aliceblue;
+    margin-left: 150px;
+    transform-origin: top;
+    transform: rotate(60deg);
+    transition: transform .4s ease-in;
+    margin-right: 0;
+}
+    
+.container-cricket:hover .bat {
+    transform: rotate(0deg);
+    
+}
+.ball {
+    display: inline-block;
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    background-color:blue;
+    transition: transform 1s linear .39s;
+}
+.container-cricket:hover .ball {
+    transform: translate(900px);
+}

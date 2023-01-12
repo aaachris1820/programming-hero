@@ -1,0 +1,15 @@
+input:focus {
+    color: aqua;
+}
+h1::after {
+    content: "hello";
+}
+input {
+    position: relative;
+    top: -83px;
+    z-index: ;
+}
+h1 {
+    position: relative;
+    z-index: 1;
+}
