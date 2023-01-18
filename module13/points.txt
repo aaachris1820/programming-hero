@@ -1,0 +1,5 @@
+bonus
+- position the yellow button a little upwards
+- add some transformation/transition style to the fact icons when hovered
+- meaningful section
+- mobile responsive 576px
