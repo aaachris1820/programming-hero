@@ -1,0 +1,19 @@
+.grid-parent {
+    display: grid; 
+    grid-template-columns: repeat(4,100px);
+     grid-template-rows: repeat(4,100px);
+      grid-template-areas: "a a b b"
+       "a a c c"
+        "a a c c ";
+}
+
+.grid-1 {
+    grid-area: a;
+}
+
+.grid-2 {
+    grid-area: b;
+}
+.grid-3 {
+    grid-area: c;
+}
