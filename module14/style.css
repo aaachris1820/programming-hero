@@ -9,3 +9,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.ms-100 {
+    margin-left: 100px;
+}
+
+.mb-165 {
+    margin-bottom: 150px;
+}
+
+.mb-120 {
+    margin-bottom: 120px;
+}
+
+
+/* header style */
+
+header {
+    background-color: #264653 ;
+}
+
+.banner-py {
+    padding-top: 69px;
+    padding-bottom: 96px;
+}
+
+/* navbar style */
+
+.navbar-toggler {
+    border: 1px solid white !important;
+}
+
+
+/* banner style */
+
+
+/* featured section */
+
+.line-featured {
+    width: 60px;
+    border-top: 1px solid red;
+}
+
+/* client section styles */
+
+.client-card-pad {
+    padding: 40px 35px;
+}
+
+/* footer style */
+
+ footer {
+    padding-top: 56px;
+    padding-bottom: 84px;
+    background-color: black;
+    color: white;
+ }
+
+/* responsive style */
+
+@media screen and (max-width:576px) {
+    
+    .ms-100 {
+        margin-left: 0px;  }
+
+}

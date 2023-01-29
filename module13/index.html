@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -13,26 +17,34 @@
 
 <!-- nav section -->
 
-        <nav class="nav-section">
-
-            <h1 class="nav-title">G3 Architects</h1>
-
-            <div class="container-nav-link">
-                <a href="" class="nav-link">Home</a>
-                <a href="" class="nav-link">About</a>
-                <a href="" class="nav-link">Contact Us</a>
-                <a href="" class="nav-link">Login</a>
-            </div>
-        </nav>
+<nav class="navbar mx-auto w-75 navbar-expand-xl navbar-expand-lg navbar-expand-md mb-5 mt-3">
+    <div class="container">
+      <a class="navbar-brand fs-1 fw-bold" href="#">G3-Architects</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" href="#">About</a>
+          <a class="nav-link active" href="#">Contact Us</a>
+          <a class="nav-link active" href="#">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+        
 
 <!-- banner section -->
 
-        <section class="container-banner">
+        <section class="container w-75 mb-5">
 
-            <h1 class="title-banner">Brand New<br>Group of Architects</h1>
-            <p class="description-banner">We specialize in creating innovative and sustainable designs for residential and commercial buildings. Let us help you bring your dream space to reality.</p>
-            <button class="btn-explore">Explore more</button>
-            <img src="images/banner.png" alt="" class="img-banner">
+            <h1 class="title-banner text-center display-3 fw-bold lh-1 mb-3">Brand New<br>Group of Architects</h1>
+            <p class="description-banner text-center w-75 mx-auto mb-4">We specialize in creating innovative and sustainable designs for residential and commercial buildings. Let us help you bring your dream space to reality.</p>
+            <div class="text-center mb-5 ">
+                <button class="btn px-4 py-3 btn-lg btn-primary mx-auto fw-semibold">Explore more</button>
+            </div>
+            <img src="images/banner.png" alt="" class="img-banner img-fluid mb-5">
         </section>
     </header>
     
@@ -40,73 +52,85 @@
         
 <!-- quick list section -->
 
-        <section class="container-quick-list">
+        <section class="quick-list container w-75 mx-auto d-flex mt-5 mb-5">
 
-            <div class="img-container-quick-list">
-                <img src="images/team1.png" alt="team working image 1" class="img-quick-list">
-                <img src="images/team2.png" alt="team working image 2" class="img-quick-list">
-                <img src="images/team3.png" alt="team working image 3" class="img-quick-list">
-                <img src="images/team4.png" alt="team working image3" class="img-quick-list">
+            <div class="container mb-5 me-5">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <img src="images/team1.png" alt="team working image 1" class="img-fluid">
+                    </div>
+                    <div class="col col-lg-6">
+                        <img src="images/team2.png" alt="team working image 2" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <img src="images/team3.png" alt="team working image 1" class="img-fluid">
+                    </div>
+                    <div class="col col-lg-6">
+                        <img src="images/team4.png" alt="team working image 2" class="img-fluid">
+                    </div>
+                </div>
             </div>
 
-            <div class="text-quick-list">
-                <h1 class="title-quick-list">
+            <div class="container my-auto">
+                <h1 class="display-5 fw-bold lh-1 mb-3">
                     Quick list <span class="title-text-bold">of Our</span><br><span class="title-text-color">Features</span>
                 </h1>
-                <p class="description-quick-list">Our team of experts work closely with clients to bring their vision to life and ensure a successful outcome. From residential homes to commercial buildings, we offer a full range of services to make your dream space a reality.</p>
-                <button class="btn-explore">Explore More</button>
+                <p class="mb-5 fs-6">Our team of experts work closely with clients to bring their vision to life and ensure a successful outcome. From residential homes to commercial buildings, we offer a full range of services to make your dream space a reality.</p>
+                <button class="btn btn-primary px-4 py-3 btn-lg">Explore More</button>
             </div>
         </section>
 
  <!-- features section -->
 
-        <section class="container-features-section">
+        <section class="features container w-75 d-flex d-sm-flex mt-5 mb-5">
 
-            <div class="text-features">
+            <div class="container my-auto">
 
-                <h1 class="title-features">
+                <h1 class="fs-2 fw-bold">
                     Features you will<br>love & enjoy
                 </h1>
 
-                <p class="description-features">Experience a seamless process from concept to construction with the help of our experienced team and cutting-edge technology.</p>
+                <p class="text-feature">Experience a seamless process from concept to construction with the help of our experienced team and cutting-edge technology.</p>
 
-                <div class="container-features">
+                <div class="container  p-0">
                     
-                    <div class="feature">
-                        <h1 class="title-feature">Desktop & Mobile Version</h1>
+                    <div class="container mt-5 mb-4 border border-white rounded shadow-sm ">
+                        <h1 class="fs-5 fw-bold">Desktop & Mobile Version</h1>
                         <p class="text-feature">Browse our website on any device, whether desktop or mobile, and enjoy a seamless user experience with easy navigation and optimized design.</p>
                     </div>
-                    <div class="feature">
-                        <h1 class="title-feature">Drag & Drop Builder</h1>
+                    <div class="container mb-4 border border-white rounded shadow-sm">
+                        <h1 class="fw-bold fs-5">Drag & Drop Builder</h1>
                         <p class="text-feature">Create your dream space with ease using our user-friendly drag and drop builder, allowing you to customize and visualize your design in real-time.</p>
                     </div>
-                    <div class="feature">
-                        <h1 class="title-feature">Awesome Modern Design</h1>
+                    <div class="container mb-4 border border-white rounded shadow-sm">
+                        <h1 class="fw-bold fs-5">Awesome Modern Design</h1>
                         <p class="text-feature">Enjoy a design that is both timeless and on-trend, with a focus on functionality and flow that will enhance your daily life.</p>
                     </div>
                     
                 </div>
             </div>
 
-            <div class="img-container-features">
+            <div class=" img-container container ms-5 position-relative">
 
-                <img src="images/architect.png" alt="woman architect" class="img-features">
-                <button class="btn-experience"><span class="text-btn-experience">10+Year</span><br>Experience</button>
+                <img src="images/architect.png" alt="woman architect" class="img-fluid ms-5 mb-5 img-feature">
+                <button class="btn-experience btn btn-lg btn-primary py-4 px-5 mb-5 position-absolute"><span class="fs-1 lh-1">10+Year</span><br>Experience</button>
             </div>
         </section>
 
  <!-- facts section -->
         
-        <section class="container-facts-section">
+        <section class="container mb-5 mt-5">
 
-            <h1 class="title-facts">Some Facts</h1>
+            <h1 class="fs-2 fw-bold">Some Facts</h1>
 
-            <p class="description-facts">Impress your clients with our in-depth knowledge of architectural history and design principles, showcasing our passion and expertise in the field.</p>
+            <p class="description-facts mb-5">Impress your clients with our in-depth knowledge of architectural history and design principles, showcasing our passion and expertise in the field.</p>
 
-            <div class="container-facts">
+            <div class="container-facts container d-flex mt-5 mb-5">
 
-                <div class="container-fact">
-                    <div class="fact">
+                <div class="facts container text-center py-5 mx-auto my-auto border rounded">
+                    <div class="fact mx-3 my-5">
                         <img src="images/icons/ribon.png" alt="ribbon image" class="img-fact">
                         <h1 class="title-fact">54</h1>
                         <p class="description-fact">Awards Winnigs</p>
@@ -114,25 +138,25 @@
                     
                 </div>
 
-                <div class="container-fact">
-                    <div class="fact">
+                <div class="facts container text-center py-5 mx-auto my-auto border rounded">
+                    <div class="fact mx-4 my-5">
                         <img src="images/icons/projects.png" alt="projects image" class="img-fact">
                         <h1 class="title-fact">1458</h1>
                         <p class="description-fact">Projects Finished</p>
                     </div>
                 </div>
                 
-                <div class="container-fact">
+                <div class="facts container text-center py-5 mx-auto my-auto border rounded">
 
-                    <div class="fact">
+                    <div class="fact mx-4 my-5">
                         <img src="images/icons/customers.png" alt="image client list" class="img-fact">
                         <h1 class="title-fact">590</h1>
                         <p class="description-fact">Clients Worked</p>
                     </div>
                 </div>
                 
-                <div class="container-fact">
-                    <div class="fact">
+                <div class="facts container text-center py-5 mx-auto my-auto border rounded">
+                    <div class="fact mx-4 my-5">
                         <img src="images/icons/email.png" alt="email image" class="img-fact">
                         <h1 class="title-fact">22578</h1>
                         <p class="description-fact">Email Sent</p>
@@ -144,32 +168,32 @@
 
  <!-- sponsors section -->
 
-        <section class="container-sponsors-section">
+        <section class="container mt-5 mb-5">
 
-            <h1 class="title-sponsors">Our Sponsors</h1>
+            <h1 class="fs-2 fw-bold">Our Sponsors</h1>
 
             <p class="description-sponsors">Join our community of like-minded individuals and organizations who share our mission to create a better world through design.</p>
 
-            <div class="container-sponsors">
-                <img src="images/sponsors/spotify.png" alt="spotify logo" class="img-sponsor">
-                <img src="images/sponsors/amazon.png" alt="amazon logo" class="img-sponsor">
-                <img src="images/sponsors/google.png" alt="google logo" class="img-sponsor">
+            <div class="container sponsor-container d-flex">
+                <img src="images/sponsors/spotify.png" alt="spotify logo" class="img-sponsor img-fluid">
+                <img src="images/sponsors/amazon.png" alt="amazon logo" class="img-fluid img-sponsor">
+                <img src="images/sponsors/google.png" alt="google logo" class="img-fluid img-sponsor">
                 <img src="images/sponsors/telerama.png" alt="telerama logo" class="img-sponsor">
-                <img src="images/sponsors/figma.png" alt="figma logo" class="img-sponsor">
+                <img src="images/sponsors/figma.png" alt="figma logo" class="img-fluid img-sponsor">
             </div>
         </section>
 
 <!-- contact us section -->
 
-        <section class="contact-us">
-            <h1 class="title-contact-us">Contact Us</h1>
+        <section class="contact-us container text-center mt-5 mb-5">
+            <h1 class="fs-2 fw-bold">Contact Us</h1>
             <p class="description-contact-us">We are always ready to help. How can we help you get what you need? </p>
 
-            <div class="container-button">
+            <div class="container text-center">
                
-                <button class="btn-contact">Contact Now</button>
+                <button class="btn btn-primary btn-lg px-4 py-3">Contact Now</button>
                 <span class="text-between-button">or</span>
-                <button class="btn-hire">Hire us</button>
+                <button class="btn btn-primary btn-lg px-5 py-3">Hire us</button>
             </div>
             
             <p class="text-email">For everything else email us at</p>
@@ -180,8 +204,10 @@
 
 <!-- footer section -->
 
-    <footer>
+    <footer class="mt-5 mb-5">
         <p class="text-footer">All rights reserved copyright@2023 startup landing page design</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
