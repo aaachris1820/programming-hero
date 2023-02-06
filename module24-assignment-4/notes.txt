@@ -1,0 +1,4 @@
+give a description of what the function does
+have to use let/const
+meaningful variable and input parameter name
+input validation
