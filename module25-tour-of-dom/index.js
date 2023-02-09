@@ -28,3 +28,10 @@ let tagPracticeList=document.getElementsByTagName('li');
 console.log(typeof tagPracticeList);
 console.log(tagPracticeList);
 // innerHTML access process is same as getElementsByClassNames
+let newOrderedList=document.createElement('ol');
+newOrderedList.innerHTML=`
+<li>order 1</li>
+<li>order 2</li>
+<li>order 3</li>
+`;
+classPracticeList[0].appendChild(newOrderedList);
