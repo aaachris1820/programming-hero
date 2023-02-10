@@ -1,0 +1,11 @@
+section{
+    display:flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.button-submit,.button-reset {
+    padding: 10px 20px;
+    width: 100px;
+}
+
