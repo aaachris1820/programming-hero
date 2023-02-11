@@ -7,7 +7,13 @@ for(heading of h2){
 
 //set background color to tomato for a section with backpack id
 
-console.log(document.getElementById('backpack'));
 document.getElementById('backpack').style.backgroundColor='tomato';
+
+//change border radius of all card class to 30px
+
+let cards=document.getElementsByClassName('card');
+for (card of cards){
+    card.style.borderRadius='30px';
+}
 
 //
