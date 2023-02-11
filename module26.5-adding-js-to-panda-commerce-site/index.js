@@ -61,3 +61,13 @@ inputEmail.oninput=function (){
     buttonSubmit.disabled=true;
 }
 
+
+//change a image if mouseenter event happens
+
+let imgTest=document.getElementById('img-test');
+imgTest.addEventListener('mouseenter', function () {
+    
+        imgTest.src = "images/bags/bag-1.png";
+       
+    console.log('hello');
+});
