@@ -16,4 +16,12 @@ for (card of cards){
     card.style.borderRadius='30px';
 }
 
+//write a function with a console log and add it as a click handler on a button anywhere
+
+function clickHandlerForConsoleLog () {
+    console.log('click handled');
+}
+document.getElementById('button-banner-buy-now').onclick=clickHandlerForConsoleLog;
+
+
 //
