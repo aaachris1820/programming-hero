@@ -12,7 +12,7 @@ document.getElementById('backpack').style.backgroundColor='tomato';
 //change border radius of all card class to 30px
 
 let cards=document.getElementsByClassName('card');
-for (card of cards){
+for (let card of cards){
     card.style.borderRadius='30px';
 }
 
@@ -28,23 +28,36 @@ document.getElementById('button-banner-buy-now').onclick=clickHandlerForConsoleL
 //add an event handler on all buy now button that removes that button element
 
 let buyNowButtons=document.getElementsByClassName('panda-btn-buy-now');
-buyNowButtons=Array.from(buyNowButtons);
 
-/* for (button of buyNowButtons){
+for (let button of buyNowButtons){
     button.addEventListener('click',function(){
         button.style.display='none';
+        // this.parentNode.removeChild(this);
         console.log(button);
     });
     
     
-} */
+}
 
-for(let i=0;i<buyNowButtons.length;i++) {
+/* for(let i=0;i<buyNowButtons.length;i++) {
 buyNowButtons[i].onclick=function () {
     buyNowButtons[i].style.display='none';
     console.log(buyNowButtons[i]);
 }
 
+} */
+
+
+//toggle submit button to active if the input value is email
+
+let buttonSubmit=document.getElementById('button-submit');
+let inputEmail=document.getElementById('exampleInputEmail1');
+inputEmail.oninput=function (){
+    console.log(inputEmail.value);
+    
+    if(inputEmail.value =='email')
+        buttonSubmit.disabled=false;
+    else
+    buttonSubmit.disabled=true;
 }
 
-//
