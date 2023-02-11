@@ -20,8 +20,31 @@ for (card of cards){
 
 function clickHandlerForConsoleLog () {
     console.log('click handled');
+    
 }
 document.getElementById('button-banner-buy-now').onclick=clickHandlerForConsoleLog;
 
+
+//add an event handler on all buy now button that removes that button element
+
+let buyNowButtons=document.getElementsByClassName('panda-btn-buy-now');
+buyNowButtons=Array.from(buyNowButtons);
+
+/* for (button of buyNowButtons){
+    button.addEventListener('click',function(){
+        button.style.display='none';
+        console.log(button);
+    });
+    
+    
+} */
+
+for(let i=0;i<buyNowButtons.length;i++) {
+buyNowButtons[i].onclick=function () {
+    buyNowButtons[i].style.display='none';
+    console.log(buyNowButtons[i]);
+}
+
+}
 
 //
