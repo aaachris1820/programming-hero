@@ -71,3 +71,15 @@ imgTest.addEventListener('mouseenter', function () {
        
     console.log('hello');
 });
+
+
+// change the background color of the lets stay in touch section if doubleclicked
+
+let subscribe=document.getElementById('subscribe');
+
+subscribe.ondblclick=function () {
+    let randomNumber=Math.floor(Math.random()*10)+1;
+    let colorBackground=['lightblue','gold','lightyellow','palegoldenrod','lawngreen','springgreen','turquoise','cornflowerblue','slateblue','plum']
+    subscribe.style.backgroundColor=colorBackground[randomNumber];
+    console.log(randomNumber);
+}
