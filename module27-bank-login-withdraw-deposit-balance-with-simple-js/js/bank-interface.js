@@ -22,8 +22,8 @@ document.getElementById('button-deposit').addEventListener('click', function () 
         totalBalanceValue+=inputDepositValue;
         totalDepositValue+=inputDepositValue
         //update totalbalance and totaldeposit textcontent in html
-        totalBalance.textContent=totalBalanceValue;
-        totalDeposit.textContent=totalDepositValue;
+        totalBalance.textContent=totalBalanceValue.toFixed(2);
+        totalDeposit.textContent=totalDepositValue.toFixed(2);
 
         console.log(inputDepositValue,totalDepositValue,totalBalanceValue);
     }
@@ -40,8 +40,8 @@ document.getElementById('button-withdraw').addEventListener('click', function ()
     totalBalanceValue-=inputWithdrawValue;
     totalWithdrawValue+=inputWithdrawValue
     //update totalbalance and totaldeposit textcontent in html
-    totalBalance.textContent=totalBalanceValue;
-    totalWithdraw.textContent=totalWithdrawValue;
+    totalBalance.textContent=totalBalanceValue.toFixed(2);
+    totalWithdraw.textContent=totalWithdrawValue.toFixed(2);
 
     console.log(inputWithdrawValue,totalWithdrawValue,totalBalanceValue);
     }
