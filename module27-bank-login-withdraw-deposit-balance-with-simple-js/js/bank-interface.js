@@ -25,8 +25,6 @@ document.getElementById('button-deposit').addEventListener('click', function () 
         totalBalance.textContent=totalBalanceValue;
         totalDeposit.textContent=totalDepositValue;
 
-        
-
         console.log(inputDepositValue,totalDepositValue,totalBalanceValue);
     }
     
@@ -37,7 +35,7 @@ document.getElementById('button-withdraw').addEventListener('click', function ()
     //capture input withdraw value
     let inputWithdrawValue=parseFloat(document.getElementById('input-withdraw').value);
     console.log(inputWithdrawValue);
-    if (inputWithdrawValue>=0) {
+    if (inputWithdrawValue>=0 &&inputWithdrawValue<=totalBalanceValue) {
     //update totalbalance and totalwithdraw value
     totalBalanceValue-=inputWithdrawValue;
     totalWithdrawValue+=inputWithdrawValue
@@ -45,10 +43,21 @@ document.getElementById('button-withdraw').addEventListener('click', function ()
     totalBalance.textContent=totalBalanceValue;
     totalWithdraw.textContent=totalWithdrawValue;
 
-    
-
     console.log(inputWithdrawValue,totalWithdrawValue,totalBalanceValue);
     }
+    else if(inputWithdrawValue>totalBalanceValue)
+        {
+            let p=document.createElement('p');
+            p.innerText='Withdrawal amount can not be more than total balance';
+            p.style.color='red';
+            p.style.fontWeight='bold';
+            p.style.marginBottom='10px';
+            document.getElementById('error-message').appendChild(p);
+            setTimeout(function(){
+                p.remove();
+            },2500)
+        }
+    
     
 
 });
