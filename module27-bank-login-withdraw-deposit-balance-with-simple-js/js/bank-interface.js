@@ -15,6 +15,7 @@ console.log(totalBalance,totalDeposit,totalWithdraw);
 
 // deposit button event listener
 document.getElementById('button-deposit').addEventListener('click', function () {
+    //capture input deposit value
     let inputDepositValue=parseFloat(document.getElementById('input-deposit').value);
 
     if(inputDepositValue>=0) {
@@ -31,19 +32,23 @@ document.getElementById('button-deposit').addEventListener('click', function () 
 });
 
 // withdraw button event listener
+
 document.getElementById('button-withdraw').addEventListener('click', function () {
+
     //capture input withdraw value
     let inputWithdrawValue=parseFloat(document.getElementById('input-withdraw').value);
     console.log(inputWithdrawValue);
     if (inputWithdrawValue>=0 &&inputWithdrawValue<=totalBalanceValue) {
-    //update totalbalance and totalwithdraw value
-    totalBalanceValue-=inputWithdrawValue;
-    totalWithdrawValue+=inputWithdrawValue
-    //update totalbalance and totaldeposit textcontent in html
-    totalBalance.textContent=totalBalanceValue.toFixed(2);
-    totalWithdraw.textContent=totalWithdrawValue.toFixed(2);
 
-    console.log(inputWithdrawValue,totalWithdrawValue,totalBalanceValue);
+        //update totalbalance and totalwithdraw value
+        totalBalanceValue-=inputWithdrawValue;
+        totalWithdrawValue+=inputWithdrawValue
+
+        //update totalbalance and totaldeposit textcontent in html
+        totalBalance.textContent=totalBalanceValue.toFixed(2);
+        totalWithdraw.textContent=totalWithdrawValue.toFixed(2);
+
+        console.log(inputWithdrawValue,totalWithdrawValue,totalBalanceValue);
     }
     else if(inputWithdrawValue>totalBalanceValue)
         {
