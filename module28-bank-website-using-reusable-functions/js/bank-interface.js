@@ -6,7 +6,7 @@ function getInputValueById(idName) {
     if(parseFloat(valueOfId)>=0)
         return parseFloat(valueOfId);
     else
-        alert('enter a positive number')
+        return false;
 }
 
 //capture elements by id and get the inner text content coverted to floating number by giving the id string as input
