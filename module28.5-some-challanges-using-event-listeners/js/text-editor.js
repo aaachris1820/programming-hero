@@ -80,3 +80,26 @@ document.getElementById('input-text-size').addEventListener('change', function (
 
     textArea.style.fontSize=e.target.value+'px';
 });
+
+//event listener for text uppercase and text lowercase
+document.getElementById('text-uppercase').addEventListener('click',function(e) {
+
+    classListAddRemoveIfItsInTextArea('uppercase',textArea);
+    classListAddRemoveIfItsInTextArea('bg-black',e.target);
+    classListAddRemoveIfItsInTextArea('text-white',e.target);
+});
+
+document.getElementById('text-lowercase').addEventListener('click',function(e) {
+
+    classListAddRemoveIfItsInTextArea('lowercase',textArea);
+    classListAddRemoveIfItsInTextArea('bg-black',e.target);
+    classListAddRemoveIfItsInTextArea('text-white',e.target);
+});
+
+
+//event listener for input color
+
+document.getElementById('input-color').addEventListener('change',function(e) {
+
+    textArea.style.color=e.target.value;
+});
