@@ -7,18 +7,71 @@
     <title>DOM and Event Listeners short Tasks</title>
 </head>
 <body>
-    <div id="container-price" class=" mt-20 w-1/2 bg-yellow-100 rounded-xl py-10 px-10 mx-auto">
+
+    <!-- coupon discounted price calculator -->
+
+    <div id="container-price" class=" mt-20 w-9/12 md:w-1/2 bg-yellow-100 rounded-xl py-10 px-10 mx-auto mb-24">
         <h1 class="text-2xl font-semibold mb-2">Price: <span id="price">1000</span>$</h1>
         <label for="input-coupon" class="font-medium">Enter Coupon Code:</label>
-        <input class=" border-2 border-sky-200" type="text" id="input-coupon">
+        <input class=" border-2 border-sky-200 w-full" type="text" id="input-coupon">
         <button class="block bg-blue-500 text-white mt-3 py-1 px-4 rounded-lg" id="button-submit">Submit</button>
     </div>
     
+    <!-- text editor -->
+
+    <div class="bg-teal-100 rounded-xl w-11/12 mx-auto">
+
+        <h1 class="pt-6 font-bold text-3xl text-center text-green-600">Text <span class="text-blue-500">Editor</span></h1>
+
+        <div class="border-2 rounded-lg bg-yellow-400 mt-12  w-11/12  mx-auto">
+            <div class="flex justify-around items-center gap-y-5 flex-wrap py-10 gap-x-4 px-10" id="container-text-area">
+                <!-- text decoration buttons -->
+
+                <div id="container-text-decoration-buttons" >
+                    <button class="bg-white px-3 py-1 rounded-md shadow-md mr-1 text-bold"><i class="fas fa-bold"></i></button>
+                    <button class="bg-white px-3 py-1 rounded-md shadow-md mr-1 text-italic"><i class="fas fa-italic"></i></button>
+                    <button class="bg-white px-3 py-1 rounded-md shadow-md text-underline"><i class="fas fa-underline"></i></button>
+                </div>
+
+                <!-- text alignment buttons -->
+
+                <div id="container-text-alignment-buttons">
+                    <button  class="bg-white px-2 py-1 rounded-md shadow-md mr-1"><i class="fas fa-align-left"></i></button>
+                    <button class="bg-white px-2 py-1 rounded-md shadow-md mr-1"><i class="fas fa-align-center"></i></button>
+                    <button class="bg-white px-2 py-1 rounded-md shadow-md mr-1"><i class="fas fa-align-right"></i></button>
+                    <button class="bg-white px-2 py-1 rounded-md shadow-md mr-1"><i class="fas fa-align-justify"></i></button>
+                </div>
+
+                <!-- text size input -->
+
+                <input type="number" name="" value="16" class="w-12 pl-2 rounded-md" id="input-text-size">
+
+                <!-- text-uppercase and lowercase buttons -->
+                <div>
+                    <button class="bg-white px-2 py-1 rounded-md shadow-sm font-medium mr-2">Text-Uppercase</button>
+                    <button class="bg-white px-2 py-1 rounded-md shadow-sm font-medium">Text-Lowercase</button>
+                </div>
+
+                <!-- input color -->
+                <input type="color" name="" id="input-color" class="bg-white px-1 py-0.5 rounded-md">
+            </div>
+
+            <!-- text area -->
+
+            <div class="flex justify-center">
+                <textarea name="" id="text-area" class="w-3/4 my-10 rounded-md pl-3 pt-3 focus:outline-blue-200" rows="15"></textarea>
+            </div>
+
+        </div>
+
+    </div>
 
 
     <!-- scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/index.js"></script>
     <script src="js/coupon-discount.js"></script>
+    <script src="js/text-editor.js"></script>
+    <script src="https://kit.fontawesome.com/1476c267cf.js" crossorigin="anonymous"></script>
 </body>
 </html>
