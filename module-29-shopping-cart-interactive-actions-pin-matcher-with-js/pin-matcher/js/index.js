@@ -2,3 +2,7 @@
 function setInputValueById(numberValue,idName){
     document.getElementById(idName).value=numberValue;
 }
+
+function setTextContentById(numberValue,idName){
+    document.getElementById(idName).textContent=numberValue;
+}

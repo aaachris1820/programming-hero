@@ -4,7 +4,7 @@ document.getElementById('calculator').addEventListener('click',function(e){
 
     let pinNumber=document.getElementById('input-user').value;
     const number=e.target.innerText;
-    console.log(pinNumber,number);
+
     if(!isNaN(number) && pinNumber.length<6)
     {
         pinNumber+=number;
