@@ -16,13 +16,27 @@ function updateCasePrice(){
     return priceCaseTotal;
 }
 
+function updateFinalTotal() {
+    const totalIPhonePrice=updateIPhonePrice();
+    const totalCasePrice=updateCasePrice();
+    const subTotal=totalCasePrice+totalIPhonePrice;
+    const tax= subTotal*(15/100);
+    const finalTotal=subTotal+tax;
+
+    setTextContentById('$'+subTotal,'sub-total');
+    setTextContentById('$'+tax.toFixed(2),'tax');
+    setTextContentById('$'+finalTotal,'final-total');
+}
+
 //event delegation to update phone price whenever a click happens in container with the buttons
 document.getElementById('container-cart-input-iPhone').addEventListener('click',function(){
     updateIPhonePrice();
+    updateFinalTotal();
     
 });
 
 document.getElementById('container-cart-input-case').addEventListener('click',function(){
         updateCasePrice();
+        updateFinalTotal();
 })
 
