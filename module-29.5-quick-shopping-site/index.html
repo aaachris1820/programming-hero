@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Shopping</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- header -->
+
+    <header class="shadow-lg mb-16">
+
+        <!-- navbar -->
+
+        <div class="navbar bg-base-100 flex justify-between w-10/12 mx-auto ">
+            
+            <div class="bg-slate-300 rounded-full">
+              <a class="btn btn-ghost normal-case text-xl">Quick Shopping</a>
+            </div>
+            <div class="bg-red-400 rounded-full px-3">
+              <button class="btn btn-square btn-ghost">
+                Blog
+              </button>
+            </div>
+          </div>
+    </header>
+
+    <main class="mb-96">
+        <section class="grid grid-cols-12 w-11/12 mx-auto gap-8">
+
+            <!-- cards section -->
+
+            <div class="col-span-12 xl:col-span-7 flex flex-wrap gap-6 cards-section">
+
+                <div class="card w-60 bg-base-100 shadow-xl">
+                    <figure><img src="https://picsum.photos/384/200?random=5" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Coffee Js</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?Probably mine.</p>
+                      <p>Price: $<span>110</span></p>
+                      <p>Quantity: $<span>5</span></p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary rounded-full">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-60 bg-base-100 shadow-xl">
+                    <figure><img src="https://picsum.photos/384/200?random=2" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Vue Js</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?Probably mine.</p>
+                      <p>Price: $<span>210</span></p>
+                      <p>Quantity: $<span>4</span></p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary rounded-full">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-60 bg-base-100 shadow-xl">
+                    <figure><img src="https://picsum.photos/384/200?random=1" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Hello Js</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?Probably mine.</p>
+                      <p>Price: $<span>10</span></p>
+                      <p>Quantity: $<span>15</span></p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary rounded-full">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-60 bg-base-100 shadow-xl">
+                    <figure><img src="https://picsum.photos/384/200?random=3" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Angular Js</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?Probably mine.</p>
+                      <p>Price: $<span>200</span></p>
+                      <p>Quantity: $<span>3</span></p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary rounded-full">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-60 bg-base-100 shadow-xl">
+                    <figure><img src="https://picsum.photos/384/200?random=4" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Mix Js</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?Probably mine.</p>
+                      <p>Price: $<span>250</span></p>
+                      <p>Quantity: $<span>2</span></p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary rounded-full">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+            </div>
+
+            <!-- products table section -->
+
+            <div class="col-span-12 xl:col-span-5">
+                <h1 class="text-3xl underline text-center
+                 mb-8">Total Products: <span class="text-blue-500 no-underline" id="total-product"></span></h1>
+
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>N0</th>
+                          <th>NAME</th>
+                          <th>PRICE</th>
+                          <th>QUANTITY</th>
+                          <th>TOTAL</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody id="table-body">
+                        
+                      </tbody>
+                    </table>
+                  </div>
+
+            </div>
+
+        </section>
+    </main>
+    
+
+    <!-- scripts -->
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/index.js"></script>
+    <script src="js/card-to-products.js"></script>
+</body>
+</html>
