@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <!-- header section -->
+
+    <header>
+            
+        <!-- nav section -->
+
+        <div class="navbar bg-[rgba(16,143,216,0.1)] my-[50px] w-11/12 mx-auto flex justify-between px-[50px] items-center flex-wrap gap-y-6">
+            <!-- brand name -->
+            <div class="flex flex-col items-start">
+              <h1 class="text-[45px] leading-tight font-bold ">Interactive</h1>
+              <p class="font-medium text-[30px]">Geometry Genius</p>
+            </div>
+
+            <!-- blog button -->
+
+            <div >
+              <button class="bg-primary text-white px-9 py-2 rounded-lg text-xl font-bold" id="btn-blog">Blog</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- main section -->
+
+    <main>
+
+        <!-- geometry cards and area section -->
+
+        <section class="px-[16px] sm:px-[50px] grid grid-cols-12 auto-rows-auto gap-6 mb-96">
+
+            <!-- geometry cards -->
+
+            <div class="col-span-12 xl:col-span-9 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 justify-center" id="cards-container">
+
+                <!-- triangle card -->
+
+                <div class="card  bg-base-100 shadow-sm border rounded-lg" id="card-1">
+
+                    <figure class="px-10 pt-10">
+                      <img src="images/triangle.png" alt="triangle"  />
+                    </figure>
+
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Triangle</h2>
+                      <p class="mb-5">Area (A) =0.5 <span class="text-xl">&times;</span> b <span class="text-xl">&times;</span> h</p>
+
+                      <div>
+                        <input type="text" value="b" class="bg-[#F1F1F1] w-24 px-3 text-xl py-2 mr-1" id="input-b">
+                        <label for="input-b"> cm</label>
+                        
+                        <input type="text" value="h" class="bg-[#F1F1F1] w-24 text-xl px-3 py-2 ml-4 mr-1" id="input-h">
+                        <label for="input-h"> cm</label>
+                      </div>
+
+                      <div class="card-actions mt-12 w-full flex">
+                        <button class="text-white py-3 bg-primary grow rounded-lg font-bold text-xl button">Calculate</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                <!-- rectangle card -->
+
+                <div class="card bg-base-100 shadow-sm border rounded-lg" id="card-2">
+
+                    <figure class="px-10 pt-10">
+                      <img src="images/rectangle.png" alt="rectangle"  />
+                    </figure>
+                    
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p class="mb-5">Area (A) = w <span class="text-xl">&times;</span> l</p>
+
+                      <div>
+                        <input type="text" value="w" class="bg-[#F1F1F1] text-xl w-24 px-3 py-2 mr-1" id="input-w">
+                        <label for="input-w"> cm</label>
+                        
+                        <input type="text" value="l" class="bg-[#F1F1F1] text-xl w-24 px-3 py-2 ml-4 mr-1" id="input-l">
+                        <label for="input-l"> cm</label>
+                      </div>
+
+                      <div class="card-actions mt-12 w-full flex">
+                        <button class="text-white  py-3 grow bg-primary rounded-lg font-bold text-xl button">Calculate</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                <!-- parallelogram card -->
+
+                <div class="card bg-base-100 shadow-sm border rounded-lg" id="card-3">
+
+                    <figure class="px-10 pt-10">
+                      <img src="images/parallelogram.png" alt="parallelogram"  />
+                    </figure>
+                    
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p class="mb-5">Area (A) = b <span class="text-xl">&times;</span> h</p>
+
+                      <div>
+                        <p class="text-xl">b= <span>10</span>cm, h= <span>12</span>cm</p>
+                      </div>
+
+                      <div class="card-actions mt-12 w-full flex">
+                        <button class="text-white grow py-3 bg-primary rounded-lg font-bold text-xl button">Calculate</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  
+                <!-- rhombus card -->
+
+                <div class="card bg-base-100 shadow-sm border rounded-lg" id="card-4">
+
+                    <figure class="px-10 pt-10">
+                      <img src="images/rhombus.png" alt="rhombus"  />
+                    </figure>
+                    
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rhombus</h2>
+                      <p class="mb-5">Area (A) =0.5 <span class="text-xl">&times;</span> d<sub>1</sub> <span class="text-xl">&times;</span> d<sub>2</sub></p>
+
+                      <div>
+                        <p class="text-xl">d<sub>1</sub>= <span >16</span>cm,  d<sub>2</sub>= <span >8</span>cm</p>
+                      </div>
+
+                      <div class="card-actions mt-12 w-full flex">
+                        <button class="text-white grow py-3 bg-primary rounded-lg font-bold text-xl button">Calculate</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  
+                <!-- pentagon card -->
+
+                <div class="card bg-base-100 shadow-sm border rounded-lg" id="card-5">
+
+                    <figure class="px-10 pt-10">
+                      <img src="images/pentagon.png" alt="pentagon"  />
+                    </figure>
+                    
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Pentagon</h2>
+                      <p class="mb-5">Area (A) =0.5 <span class="text-xl">&times;</span> p <span class="text-xl">&times;</span> b</p>
+
+                      <div>
+                        <p class="text-xl">b= <span>6</span>cm, h= <span>10</span>cm</p>
+                      </div>
+
+                      <div class="card-actions mt-12 flex w-full">
+                        <button class="text-white grow py-3 bg-primary rounded-lg font-bold text-xl button">Calculate</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  
+                <!-- ellipse card -->
+
+                <div class="card bg-base-100 shadow-sm border rounded-lg" id="card-6">
+
+                    <figure class="px-10 pt-10">
+                      <img src="images/ellipse.png" alt="ellipse"  />
+                    </figure>
+                    
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p class="mb-5">Area (A) = <span class="text-xl">π</span> ab</p>
+
+                      <div>
+                        
+                            <p class="text-xl">a= <span>10</span>cm, h= <span>4</span>cm</p>
+                          
+                      </div>
+
+                      <div class="card-actions mt-12 flex w-full">
+                        <button class="text-white grow py-3 bg-primary rounded-lg font-bold text-xl button">Calculate</button>
+                      </div>
+
+                    </div>
+                  </div>                  
+
+
+            </div>
+
+            <!-- geometry areas -->
+
+            <div class="col-span-12 xl:col-span-3 border rounded-lg px-6 self-start  pb-40">
+
+                <h2 class="underline font-bold text-xl text-center mb-10 pt-8 ">Area Calculation</h2>
+
+            <!-- area value container -->
+
+                <div id="area-container" >
+
+                    
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    
+    <!-- scripts -->
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/area-calculate.js"></script>
+    <script src="js/random-color-on-event.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#1090D8',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>

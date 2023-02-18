@@ -1,0 +1,22 @@
+repo link-
+https://github.com/programming-hero-web-course2/b7a5-geometry-genius-assignment-aaachris1820
+live link-
+
+area calculation up to 2 decimal point
+at least 2 of the card will have 2 input fields to calculate area
+validation for empty input fields when calculate button is clicked
+validation for string or negative numbers
+upper right blog button will take user to a new html page
+ where we have to answer 4 questions 
+
+bonus-
+at least 8 meaningful commits
+meaningful names for class,id,function and overall codes
+mobile responsive, cards will be below each other
+then area caluculation section
+
+area calculation dynamic results have to be in numeric serial
+at least two function has to be reused
+when mouseover cards background color will chosen randomly and stay
+next mouseover after mouseout will again select a random color
+
