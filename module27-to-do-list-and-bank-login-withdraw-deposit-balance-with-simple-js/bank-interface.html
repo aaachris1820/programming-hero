@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Interface</title>
+</head>
+<body class="bg-emerald-100">
+
+<!-- header -->
+
+    <h1 class="text-5xl py-12 font-bold text-center">Let's Manage<span class="text-yellow-500"> Your Money</span></h1>
+
+<!-- main section -->
+    <main>
+
+        <!-- money status section -->
+    <section class="w-3/4 mx-auto flex sm:flex-col lg:flex-row justify-around py-8 gap-x-4 gap-y-6 text-white text-center">
+
+        <!-- deposit total-->
+
+        <div class="bg-teal-500 flex-1 py-8 rounded-lg">
+            <h2 class="font-semibold text-3xl">Deposit</h2>
+            <p class="font-medium  text-2xl"><span id="total-deposit">0</span> $</p>
+        </div>
+
+        <!-- withdraw total-->
+
+        <div class="bg-amber-500 flex-1 py-8 rounded-lg">
+            <h2 class="font-semibold text-3xl">Withdraw</h2>
+            <p  class="font-medium  text-2xl"><span id="total-withdraw">0</span> $</p>
+        </div>
+
+        <!-- balance total-->
+
+        <div class="bg-lime-500 flex-1 py-8 rounded-lg">
+            <h2 class="font-semibold text-3xl">Balance</h2>
+            <p class="font-medium  text-2xl"><span id="total-balance">1200</span> $</p>
+        </div>
+    </section>
+
+<!-- money action section -->
+
+    <section  class="w-3/4 mx-auto flex sm:flex-col xl:flex-row justify-around py-10 gap-x-4 gap-y-16">
+
+        <!-- enter deposit amount -->
+
+        <div class="bg-green-400 px-10 py-16 rounded-lg flex-1">
+
+            <label for="input-deposit" class="text-2xl py-12 font-semibold text-white">Deposit Amount</label>
+            <input type="number" name="" id="input-deposit" placeholder="$ amount you want to deposit" class="block rounded text-lg focus:outline-blue-300 mt-4 mb-5 px-3 py-2 w-full">
+
+            <!-- submit button -->
+            <button type="submit" class="font-semibold hover:bg-amber-600 text-white  bg-blue-600 px-5 py-2 rounded-lg text-lg" id="button-deposit">Deposit</button>
+        </div>
+
+        
+        <!-- enter withdraw amount -->
+
+        <div class="bg-cyan-400 px-10 py-16 rounded-lg flex-1">
+
+            <label for="input-withdraw" class="text-2xl py-12 text-white font-semibold">Withdraw Amount</label>
+            <input type="number" name="" id="input-withdraw" placeholder="$ amount you want to withdraw" class="block rounded text-lg focus:outline-blue-300 mt-4 mb-5 px-3 py-2 w-full">
+
+            <!-- submit button -->
+            <p id="error-message"></p>
+            <button type="submit" class="font-semibold hover:bg-amber-600 text-white  bg-blue-600 px-5 py-2 rounded-lg text-lg" id="button-withdraw">Withdraw</button>
+        </div>
+
+    </section>
+    </main>
+    
+
+
+<!-- scripts -->
+
+<!-- tailwindcss -->
+<script src="https://cdn.tailwindcss.com"></script>
+    
+</script>
+
+<!-- external js -->
+<script src="js/bank-interface.js"></script>
+</body>
+</html>
