@@ -14,8 +14,13 @@
             font-family: 'Poppins', sans-serif;
         }
         .banner-section{
-            background-image: url();
+            background-image:linear-gradient(to right, rgba(16, 15, 15, 0.707), rgba(16, 15, 15, 0.7)), url(images/banner_1.png);
+            background-size: cover ;
+            background-repeat: no-repeat;
+            background-position: center;
+            
         }
+
     </style>
 </head>
 <body>
@@ -35,14 +40,16 @@
 
         <!-- banner section-->
 
-        <section class="w-75 mx-auto banner-section">
-            <h1>Taste Our Delicious Best Foods</h1>
-            <p>Our dishes are carefully crafted using fresh ingredients and unique flavors, sure to tantalize your taste buds. From savory entrees to delectable desserts, we have something for everyone. Come visit us and let us take you on a journey of flavor and satisfaction!</p>
+        <section class=" banner-section py-5">
+            <div class="w-75 mx-auto py-5 my-5 text-white text-center">
+                <h1 class="display-2 fw-bold mb-3">Taste Our Delicious <br>Best Foods</h1>
+                <p class="mb-4">Our dishes are carefully crafted using fresh ingredients and unique flavors, sure to tantalize your taste buds. From savory entrees to delectable desserts, we have something for everyone. Come visit us and let us take you on a journey of flavor and satisfaction!</p>
 
-            <form class="d-flex" role="search">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-warning" type="submit">Search</button>
+                <form class="d-flex" role="search">
+                <input class="py-3 form-control " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-warning  fw-bold px-4" type="submit">Search</button>
               </form>
+            </div>
         </section>
     </header>
     
