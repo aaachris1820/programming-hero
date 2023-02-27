@@ -28,12 +28,12 @@ const loadData=async (query,dataLimit=false)=>{
         containerDevices.innerHTML='';
         containerDevices.innerText=data.message;
     }
-
-    if(dataLimit){
-        displayData(data.data.items.slice(0,dataLimit))
-    }
-    else 
+    if(dataLimit=='no'){
         displayData(data.data.items,dataLimit);
+    }
+    else
+        displayData(data.data.items.slice(0,6));
+    
 }
 
 //display data in devices container
@@ -41,17 +41,14 @@ const displayData=(datas,dataLimit)=>{
     
     try{
         containerDevices.innerHTML='';
-        if( dataLimit){
-            btnShow.classList.remove('d-none');
-            
-        }
+        
 
         for(let data of datas){
             const card=document.createElement('div');
             
             card.innerHTML=`
-            <div class="card" style="width: 18rem;">
-                <img src=${data.image.front} class="card-img-top px-4 py-3" alt="...">
+            <div class="card" style="width: 18rem;height:28rem">
+                <img width='300px' height='300px' src=${data.image.front ? data.image.front:data.image.back} class="card-img-top px-4 py-3 object-fit-contain" alt="...">
                 <div class="card-body">
                 <p class="card-text">Model: <span class="fw-bold">${data.product.model}</span></p>
                 <button class='btn btn-primary' data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick=${getProductDetail(data.product.id)}>Show Details</button>
@@ -60,6 +57,10 @@ const displayData=(datas,dataLimit)=>{
             `;
         
             containerDevices.appendChild(card);
+            if(dataLimit=='no')
+                btnShow.classList.add('d-none');
+            else
+                btnShow.classList.remove('d-none');
         }
     }
     catch(error){
@@ -116,18 +117,18 @@ const modalDisplay=(data)=>{
 }
 
 // load the initial devices
-loadData('pros');
+loadData('pros','no');
 
 // dynamic load on search input query
 inputSearch.addEventListener('keypress',(e)=>{
     if(e.key=='Enter'){
-        loadData(inputSearch.value);
+        loadData(inputSearch.value,false);
     }
 });
 
 btnSearch.addEventListener('click',(e)=>{
     if(inputSearch.value!=''){
-        loadData(inputSearch.value,6);
+        loadData(inputSearch.value,false);
     }
     else 
         alert('Enter a query!!!');
@@ -137,6 +138,6 @@ btnSearch.addEventListener('click',(e)=>{
 
 btnShow.addEventListener('click',()=>{
     if(inputSearch.value!=''){
-        loadData(inputSearch.value);
+        loadData(inputSearch.value,'no');
     }
 })
