@@ -1,0 +1,17 @@
+.img-country{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px rgb(225, 225, 225) solid;
+    margin-bottom: 16px;
+}
+.country{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    border:1px rgb(216, 216, 216) solid;
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px  rgb(183, 183, 183);
+    background-color: rgb(255, 255, 255);
+}
