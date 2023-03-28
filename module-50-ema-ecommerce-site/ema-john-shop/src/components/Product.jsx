@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Product = (props) => {
-    const {name,price,imgUrl,handleClick,seller,rating}=props;
+    const {name,price,imgUrl,handleClick,seller,rating,id}=props;
     return (
         
             <div className="card card-compact w-[320px] bg-base-100 shadow-xl">
@@ -12,7 +12,7 @@ const Product = (props) => {
     <p>Manufacturer : {seller} </p>
     <p>Rating : {rating}/5 </p>
     <div className="card-actions justify-end">
-      <button className="bg-yellow-400 px-6 py-3 font-bold rounded-xl shadow-md" onClick={handleClick}>Add to cart</button>
+      <button className="bg-yellow-400 px-6 py-3 font-bold rounded-xl shadow-md" onClick={()=>handleClick(id)}>Add to cart</button>
     </div>
   </div>
 </div>
