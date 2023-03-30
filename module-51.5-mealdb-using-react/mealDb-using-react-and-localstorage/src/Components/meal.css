@@ -1,0 +1,9 @@
+.btn-add-to-cart{
+    padding:8px 14px;border-radius:10px;background-color:red;
+    border:0;
+    box-shadow:1px 2px rgb(212, 212, 212);color:white;
+    font-weight:bold;
+}
+.disabled{
+    background-color: rgb(107, 107, 107);
+}
