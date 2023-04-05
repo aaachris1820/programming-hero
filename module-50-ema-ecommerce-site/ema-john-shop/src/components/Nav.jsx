@@ -1,20 +1,25 @@
 import React from 'react';
 import logo from '../images/Logo.svg'
+import { NavLink,Link } from 'react-router-dom';
+
 const Nav = () => {
     return (
         <nav className='bg-slate-800 px-16 mb-[50px]'>
-             <div className="navbar  text-white">
+             <div className="flex  text-white flex-wrap items-center py-6 gap-6">
   <div className="flex-1">
-        <img src={logo} alt="" className='w-[180px]'/>
+    <Link to="/">
+      <img src={logo} alt="" className='w-[180px]'/>
+    </Link>
+        
   </div>
-  <div className="flex-none">
-    <ul className="menu menu-horizontal px-1 ">
-      <li><a>Shop</a></li>
+  <div className="">
+    <ul className="flex flex-wrap gap-6 px-1 ">
+      <li><NavLink to="order" >Order</NavLink ></li>
       <li >
-        <a>Orders</a>
+        <NavLink to="order-review">Order Review</NavLink >
       </li>
-      <li><a>Inventory</a></li>
-      <li><a>Login</a></li>
+      <li><NavLink to="manage-inventory">Manage Inventory</NavLink ></li>
+      <li><NavLink to="login">Login</NavLink ></li>
     </ul>
   </div>
 </div>
