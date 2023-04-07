@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-links-active{
+  @apply bg-slate-700 text-white rounded-full hover:text-orange-500 px-3 py-2;
+}
