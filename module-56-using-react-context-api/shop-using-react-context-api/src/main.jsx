@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import {App} from './App'
 import './index.css'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Home from './component/Home'
-import {Shop} from './component/Shop'
+import Shop from './component/Shop'
 
 const router=createBrowserRouter([
   {
@@ -21,13 +21,14 @@ const router=createBrowserRouter([
         loader:()=>fetch('https://fakestoreapi.com/products?limit=15'),
       },
       {
-        path:'order',
+        path:'cart',
         element: <Home/>
       },
       {
         path:'about',
         element: <Home/>
       },
+      
     ]
   },
 ]);
