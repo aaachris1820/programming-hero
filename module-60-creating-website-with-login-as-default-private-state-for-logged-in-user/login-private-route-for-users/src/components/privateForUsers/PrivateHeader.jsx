@@ -1,22 +1,12 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContextWrapper';
-import { getAuth, signOut } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 
 
-const PrivateHeader = ({setCurrentUser}) => {
-    const {setUser,user}=useContext(AuthContext);
-    const navigate=useNavigate();
-    const handleSignOut= ()=>{
-        const auth=getAuth();
+const PrivateHeader = () => {
+    const {signOutUser}=useContext(AuthContext);
 
-         signOut(auth);
-         setUser(auth.currentUser);
-         setCurrentUser(auth.currentUser);
-         console.log(user)
-        if(auth.currentUser===null)
-            navigate('/');
-    }
     return (
         <div className="navbar bg-base-100">
   <div className="navbar-start">
@@ -42,7 +32,7 @@ const PrivateHeader = ({setCurrentUser}) => {
     </ul>
   </div>
   <div className="flex gap-6 navbar-end">
-    <Link className='btn btn-primary font-bold' to='/' onClick={handleSignOut}>Sign Out</Link>
+    <Link className='btn btn-primary font-bold' to='/' onClick={signOutUser}>Sign Out</Link>
   </div>
 </div>
     );
