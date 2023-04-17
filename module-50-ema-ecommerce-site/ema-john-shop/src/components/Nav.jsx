@@ -13,13 +13,14 @@ const Nav = () => {
         
   </div>
   <div className="">
-    <ul className="flex flex-wrap gap-6 px-1 ">
-      <li><NavLink to="order" >Order</NavLink ></li>
+    <ul className="flex flex-wrap gap-6 px-1 font-bold">
+      <li><NavLink to="order" className={({isActive})=>isActive?'bg-yellow-500 px-4 py-2 rounded-lg font-bold text-gray-800 tracking-wide':''} >Order</NavLink ></li>
       <li >
-        <NavLink to="order-review">Order Review</NavLink >
+        <NavLink to="order-review"  className={({isActive})=>isActive?'bg-yellow-500 px-4 py-2 rounded-lg font-bold text-gray-800 tracking-wide':''}>Order Review</NavLink >
       </li>
-      <li><NavLink to="manage-inventory">Manage Inventory</NavLink ></li>
-      <li><NavLink to="login">Login</NavLink ></li>
+      <li><NavLink to="manage-inventory"  className={({isActive})=>isActive?'bg-yellow-500 px-4 py-2 rounded-lg font-bold text-gray-800 tracking-wide':''}>Manage Inventory</NavLink ></li>
+      <li><NavLink to="login"  className={({isActive})=>isActive?'bg-yellow-500 font-bold text-gray-800 tracking-wide px-4 py-2 rounded-lg':''}>Login</NavLink ></li>
+      <li><NavLink to="signup"  className={({isActive})=>isActive?'bg-yellow-500 font-bold text-gray-800 tracking-wide px-4 py-2 rounded-lg':''}>Sign Up</NavLink ></li>
     </ul>
   </div>
 </div>

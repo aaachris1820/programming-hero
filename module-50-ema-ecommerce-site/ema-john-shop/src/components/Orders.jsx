@@ -9,11 +9,11 @@ const shipping=cart.reduce((sum,pd)=>sum+pd.shipping*pd.quantity,0);
 
 const tax=parseFloat((price*.07).toFixed(2));
 
-const grandTotal=price+shipping+tax;
+const grandTotal=(price+shipping+tax).toFixed(2);
     
 
     return (
-        <div className=' bg-amber-200 p-12 border rounded-xl shadow-sm text-slate-700 font-medium lg:sticky lg:top-0'>
+        <div className=' bg-amber-200 p-12 border rounded-xl shadow-sm text-slate-700 font-medium lg:sticky lg:top-0 '>
                 <h1 className='text-xl font-semibold mb-2'>Order summary</h1>
 
                 <p>Selected Items : {cart.reduce((sum,pd)=>sum+pd.quantity,0)} </p>

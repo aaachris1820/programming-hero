@@ -20,6 +20,11 @@ const OrderReview = () => {
         setCart(storedCart);
     }
 
+    const handleClearCart=()=>{
+        localStorage.setItem('cart',JSON.stringify([]))
+        setCart([]); 
+    }
+
     return (
         <div className='grid md:grid-cols-2 gap-8 md:px-20'>
             <div className='flex flex-col gap-6'>
@@ -27,7 +32,7 @@ const OrderReview = () => {
             </div>
 
             <div className=''>
-                <Orders cart={cart}></Orders>
+                <Orders cart={cart} handleClearCart={handleClearCart}></Orders>
             </div>
         </div>
     );
