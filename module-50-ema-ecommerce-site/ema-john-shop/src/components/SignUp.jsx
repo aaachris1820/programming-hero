@@ -4,7 +4,7 @@ import { AuthContext } from '../AuthContextProvider';
 
 const SignUp = () => {
     const navigate=useNavigate();
-    const {user,createNewUserWithEmail}=useContext(AuthContext);
+    const {createNewUserWithEmail}=useContext(AuthContext);
 
     const handleSignUp=async(e)=>{
         e.preventDefault();

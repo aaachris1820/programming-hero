@@ -11,12 +11,16 @@ import Error404 from './components/Error404'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
 import AuthContextProvider from './AuthContextProvider'
+import Inventory from './components/Inventory'
+import PrivateRoute from './components/PrivateRoute'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App></App>,
+    element:     <AuthContextProvider>
+      <App></App>
+    </AuthContextProvider>,
     errorElement: <Error404 />,
     children: [
       {
@@ -37,6 +41,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/signup', element: <SignUp />
+      },
+      {
+        path:'/inventory', element: <PrivateRoute>
+          <Inventory></Inventory>
+        </PrivateRoute>
       }
 
     ]
@@ -49,9 +58,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-    <AuthContextProvider>
       <RouterProvider router={router}></RouterProvider>
-    </AuthContextProvider>
   </React.StrictMode>,
 )

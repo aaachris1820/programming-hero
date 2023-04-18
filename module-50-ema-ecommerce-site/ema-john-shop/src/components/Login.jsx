@@ -6,13 +6,14 @@ const Login = () => {
   const navigate=useNavigate();
   const [loginMessage,setLoginMessage]=useState('');
 
-  const {user,loginWithEmail}=useContext(AuthContext);
+  const {loginWithEmail,currentLocation}=useContext(AuthContext);
 
+  const from=currentLocation?.state?.from || '/';
   const handleLogin=async(e)=>{
     e.preventDefault();
     const userLogin= await loginWithEmail(e.target.email.value,e.target.password.value);
     if(userLogin)
-      navigate('/')
+      navigate(from, {replace:true})
   }
 
     return (

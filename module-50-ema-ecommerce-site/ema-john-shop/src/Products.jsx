@@ -49,7 +49,7 @@ const Products = () => {
                 }
             </div>
             <div className='relative order-first lg:order-last'>
-                <Orders cart={cart} handleClearCart={handleClearCart} ></Orders>
+                <Orders cart={cart} handleClearCart={handleClearCart} checkout={false} ></Orders>
             </div>
             
         </section>

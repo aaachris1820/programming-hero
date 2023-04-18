@@ -25,8 +25,9 @@ const Nav = () => {
       <li >
         <NavLink to="order-review"  className={({isActive})=>isActive?'bg-yellow-500 px-4 py-2 rounded-lg font-bold text-gray-800 tracking-wide':''}>Order Review</NavLink >
       </li>
-      <li><NavLink to="manage-inventory"  className={({isActive})=>isActive?'bg-yellow-500 px-4 py-2 rounded-lg font-bold text-gray-800 tracking-wide':''}>Manage Inventory</NavLink ></li>
-      {user?<li>
+      <li><NavLink to="/inventory"  className={({isActive})=>isActive?'bg-yellow-500 px-4 py-2 rounded-lg font-bold text-gray-800 tracking-wide':''}>Inventory</NavLink ></li>
+      {user?<li className='flex items-center gap-6'> 
+        <p>{user.email}</p>
         <button onClick={handleSignOut} className='bg-yellow-500 text-black rounded-lg py-2 px-2'>Sign Out</button>
       </li>
       :

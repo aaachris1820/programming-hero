@@ -32,7 +32,7 @@ const OrderReview = () => {
             </div>
 
             <div className=''>
-                <Orders cart={cart} handleClearCart={handleClearCart}></Orders>
+                <Orders cart={cart} handleClearCart={handleClearCart} checkout={true}></Orders>
             </div>
         </div>
     );
