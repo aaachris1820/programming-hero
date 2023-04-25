@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import auth from './firebase-config/firebase-config';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { useLocation } from 'react-router-dom';
 
 export const AuthContext=createContext(null);
@@ -8,6 +8,10 @@ export const AuthContext=createContext(null);
 const AuthContextProvider = ({children}) => {
     const currentLocation=useLocation();
     const [loading,setLoading]=useState(true);
+
+    const sendVerificationEmail=()=>{
+        return sendEmailVerification(auth.currentUser);
+    }
 
     const createNewUserWithEmail=(email,password)=>{
         return createUserWithEmailAndPassword(auth,email,password);
@@ -24,7 +28,12 @@ const AuthContextProvider = ({children}) => {
 
     useEffect(()=>{
         const unsubscribe=onAuthStateChanged(auth,currentUser=>{
-            setUser(currentUser);
+            console.log(currentUser?.emailVerified);
+            if(currentUser?.emailVerified)
+                setUser(currentUser);
+            else if(!currentUser){
+                setUser(currentUser);
+            }
             setLoading(false);
         });
         
@@ -34,7 +43,7 @@ const AuthContextProvider = ({children}) => {
 
     const [user,setUser]=useState(null);
 
-    const contexts={user,setUser,createNewUserWithEmail,loginWithEmail,signOutUser,currentLocation,loading};
+    const contexts={user,setUser,createNewUserWithEmail,loginWithEmail,signOutUser,currentLocation,loading,sendVerificationEmail};
 
     return (
         <AuthContext.Provider value={contexts}>{children}</AuthContext.Provider>

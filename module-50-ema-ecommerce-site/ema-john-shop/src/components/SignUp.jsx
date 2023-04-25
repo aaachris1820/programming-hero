@@ -4,14 +4,13 @@ import { AuthContext } from '../AuthContextProvider';
 
 const SignUp = () => {
     const navigate=useNavigate();
-    const {createNewUserWithEmail}=useContext(AuthContext);
+    const {createNewUserWithEmail,sendVerificationEmail}=useContext(AuthContext);
 
     const handleSignUp=async(e)=>{
         e.preventDefault();
         const newUser=await createNewUserWithEmail(e.target.email.value,e.target.password.value);
-        if (newUser)
-            navigate('/login')
-
+        
+        sendVerificationEmail();
 
     }
 
