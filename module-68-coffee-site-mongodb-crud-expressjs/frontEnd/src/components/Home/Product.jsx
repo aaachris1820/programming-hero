@@ -34,7 +34,7 @@ const Product = ({coffee}) => {
 
                 <button className='p-2 bg-[#D2B48C]  rounded-lg'>👁</button>
 
-                <button className='p-2 bg-black rounded-lg' onClick={()=>navigate('/update-coffee')}>✎</button>
+                <button className='p-2 bg-black rounded-lg' onClick={()=>navigate(`/update-coffee/${_id}`)}>✎</button>
 
                 <button className='p-2 bg-red-500 rounded-lg' onClick={handleDelete}>🗑</button>
             </div>

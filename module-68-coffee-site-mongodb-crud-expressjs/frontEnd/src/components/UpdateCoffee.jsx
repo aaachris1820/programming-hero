@@ -1,18 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 const UpdateCoffee = () => {
+
+
+    const {id}=useParams();
+
+    const coffeeData=useLoaderData();
+
+    let {name,category,details,photoUrl,supplier}=coffeeData[0];
 
     const handleSubmit=async(e)=>{
         e.preventDefault();
 
         const form=fieldName=>e['target'][fieldName]['value'];
 
-        const name=form('name');
-        const category=form('category');
-        const photoUrl=form('photoUrl');
-        const supplier=form('supplier');
-        const details=form('details');
+        name=form('name');
+        category=form('category');
+        photoUrl=form('photoUrl');
+        supplier=form('supplier');
+        details=form('details');
 
         const newCoffee={
             'name': name,
@@ -22,7 +29,7 @@ const UpdateCoffee = () => {
             'photoUrl' : photoUrl
         }
         
-        const res=await fetch('http://localhost:4000/coffees',{
+        const res=await fetch(`http://localhost:4000/coffee/${id}`,{
             method:'PUT',
             headers:{
                 'Content-Type':'application/json'
@@ -46,30 +53,28 @@ const UpdateCoffee = () => {
 
                     <div className='flex flex-col gap-4'>
                         <label htmlFor="name" className='font-medium'>Name</label>
-                        <input type="text" className='p-2 rounded-sm' name='name' placeholder='Enter coffee name' />
+                        <input type="text" defaultValue={name} className='p-2 rounded-sm' name='name' placeholder='Enter coffee name' />
                     </div>
 
                     <div className='flex flex-col gap-4'>
                         <label htmlFor="category" className='font-medium'>Category</label>
-                        <input type="text" className='p-2 rounded-sm' name='category' placeholder='Enter coffee category' />
+                        <input type="text" defaultValue={category} className='p-2 rounded-sm' name='category' placeholder='Enter coffee category' />
                     </div>
 
                     <div className='flex flex-col gap-4'>
                         <label htmlFor="supplier" className='font-medium'>Supplier</label>
-                        <input type="text" className='p-2 rounded-sm' name='supplier' placeholder='Enter coffee supplier' />
+                        <input type="text" defaultValue={supplier} className='p-2 rounded-sm' name='supplier' placeholder='Enter coffee supplier' />
                     </div>
 
                     <div className='flex flex-col gap-4'>
                         <label htmlFor="details" className='font-medium'>Details</label>
-                        <input type="text" className='p-2 rounded-sm' name='details' placeholder='Enter coffee details' />
+                        <input type="text" defaultValue={details} className='p-2 rounded-sm' name='details' placeholder='Enter coffee details' />
                     </div>
 
                     <div className='flex flex-col gap-4'>
                         <label htmlFor="photoUrl" className='font-medium'>Photo</label>
-                        <input type="text" className='p-2 rounded-sm' name='photoUrl' placeholder='Enter photo url' />
+                        <input type="text" defaultValue={photoUrl} className='p-2 rounded-sm' name='photoUrl' placeholder='Enter photo url' />
                     </div>
-                    
-                    <div><label ><input type="text" placeholder='sdfa' name="coffe" className='name input input-bordered' /></label></div>
 
                 </div>
 

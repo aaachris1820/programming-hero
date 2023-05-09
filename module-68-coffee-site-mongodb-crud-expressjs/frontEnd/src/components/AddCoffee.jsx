@@ -35,7 +35,7 @@ const AddCoffee = () => {
     }
     return (
         <div className='w-10/12 mx-auto'>
-            <Link to='/' className='text-xl py-9 block text-amber-950'> Back to Home</Link>
+            <Link to='/' className='text-xl py-9 block text-amber-950'> Back to Home ⮕</Link>
 
             <form onSubmit={handleSubmit} className='bg-amber-100 rounded-sm p-16'>
                 <h1 className='text-center text-4xl font-bold mb-4'>Add New Coffee</h1>
@@ -68,8 +68,6 @@ const AddCoffee = () => {
                         <label htmlFor="photoUrl" className='font-medium'>Photo</label>
                         <input type="text" className='p-2 rounded-sm' name='photoUrl' placeholder='Enter photo url' />
                     </div>
-                    
-                    <div><label ><input type="text" placeholder='sdfa' name="coffe" className='name input input-bordered' /></label></div>
 
                 </div>
 
