@@ -29,7 +29,7 @@ const UpdateCoffee = () => {
             'photoUrl' : photoUrl
         }
         
-        const res=await fetch(`http://localhost:4000/coffee/${id}`,{
+        const res=await fetch(`https://coffeeshop-backend-rose.vercel.app/coffee/${id}`,{
             method:'PUT',
             headers:{
                 'Content-Type':'application/json'
